@@ -1,0 +1,16 @@
+{
+  "name": "insurance-bot",
+  "version": "1.0.0",
+  "description": "Botty Mc Botface",
+  "main": "node app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Michelle",
+  "license": "ISC",
+  "dependencies": {
+    "botbuilder": "^3.8.1",
+    "dotenv-extended": "^1.0.4",
+    "restify": "^4.3.0"
+  }
+}
