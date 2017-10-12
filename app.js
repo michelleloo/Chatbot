@@ -52,7 +52,7 @@ bot.recognizer(recognizer);
 
 bot.dialog('FindInsurance',[
     function (session, args, next) {
-    	session.send('Welcome to the Cooperators! If you would like some more information on our services, please click one of the linkes below!');
+    	session.send('Welcome to the company! If you would like some more information on our services, please click one of the linkes below!');
     	session.dialogData.entities = args.entities;
     	var homeEntity = builder.EntityRecognizer.findEntity(args.entities,'Home');
     	var autoEntity = builder.EntityRecognizer.findEntity(args.entities,'Auto');
@@ -162,7 +162,7 @@ bot.dialog('FindInvestments', function (session) {
 })
 
 bot.dialog('Help', function (session) {
-    session.endDialog('Hi! Welcome to the Cooperators, try asking me things like \'Home Insurance\', \'Car Insurance\' or \'Investing\'');
+    session.endDialog('Hi! Welcome to the company! Try asking me things like \'Home Insurance\', \'Car Insurance\' or \'Investing\'');
 }).triggerAction({
     matches: 'Help'
 })
@@ -174,63 +174,63 @@ function getCardsAttachments(session) {
         new builder.HeroCard(session)
             .title('Home Insurance')
             .subtitle('Protect your home and everything in it')
-            .text('The Co-operators handles hundreds of thousands of home insurance policies for people just like you, and our network of Financial Advisors will help you make sure you are getting exactly what you need.')
+            .text('Gotta Save that home')
             .images([
-                builder.CardImage.create(session, 'https://www.cooperators.ca/en/-/media/Cooperators-Media/Section-Media/Insurance/Home/Home-Landing.png?la=en&hash=EF3322C0F1F9AB3E47E61F5DC289F518EE5F3EBB')
+                builder.CardImage.create(session, 'IMAGE_URL_HERE')
             ])
             .buttons([
-                builder.CardAction.openUrl(session, 'https://www.cooperators.ca/en/insurance/home.aspx', 'Learn More')
+                builder.CardAction.openUrl(session, 'WEB_URL_HERE', 'Learn More')
             ]),
 
         new builder.HeroCard(session)
             .title('Auto Insurance')
             .subtitle("Get auto insurance that's right for you")
-            .text('If you own a vehicle of any kind, you probably know that insurance is required by law. Plans vary widely depending on your vehicle, how you use it and what province you live in.')
+            .text('Auto to protect your car from the store')
             .images([
-                builder.CardImage.create(session, 'https://www.cooperators.ca/en/-/media/Cooperators-Media/Section-Media/Insurance/Auto/Auto-Landing.png?la=en&hash=F526DD9EF8C07CE99D579B047BCDE1A0457DDBDE')
+                builder.CardImage.create(session, 'IMAGE_URL_HERE')
             ])
             .buttons([
-                builder.CardAction.openUrl(session, 'https://www.cooperators.ca/en/insurance/auto.aspx', 'Learn More')
+                builder.CardAction.openUrl(session, 'URL_HERE', 'Learn More')
             ]),
         new builder.HeroCard(session)
             .title('Life Insurance')
             .subtitle("It's worth it")
-            .text('Your Co-operators Financial Advisor is a great resource to determine how insurance fits into your life. You can also easily discover the right balance of life insurance for your needs, online.')
+            .text('Probably need that stuff')
             .images([
-                builder.CardImage.create(session, 'https://www.cooperators.ca/en/-/media/Cooperators-Media/Section-Media/Insurance/Life/Life-Landing.png?la=en&hash=537943E82F64E84F8960D01A4DA56FF12DBEEFE0')
+                builder.CardImage.create(session, 'IMAGE_URL_HERE')
             ])
             .buttons([
-                builder.CardAction.openUrl(session, 'https://www.cooperators.ca/en/insurance/life.aspx', 'Learn More')
+                builder.CardAction.openUrl(session, 'WEB_URL_HERE', 'Learn More')
             ]),
         new builder.HeroCard(session)
             .title('Business Insurance')
             .subtitle("From one Canadian business to anothert")
-            .text('You’ve invested a lot of time and effort to build your business. Protect everything you’ve worked hard to achieve with business insurance from The Co-operators. For over 65 years, we’ve been helping Canadian businesses just like yours with commercial insurance solutions and financial plans.')
+            .text('Good Business')
             .images([
-                builder.CardImage.create(session, 'https://www.cooperators.ca/en/-/media/Cooperators-Media/Section-Media/Insurance/Business/Business-Landing.png?la=en&hash=1734967A066A6BC70E446BFB3612EA3AD020B1E9')
+                builder.CardImage.create(session, 'IMAGE_URL_HERE')
             ])
             .buttons([
-                builder.CardAction.openUrl(session, 'https://www.cooperators.ca/en/insurance/business.aspx', 'Learn More')
+                builder.CardAction.openUrl(session, 'WEB_URL_HERE', 'Learn More')
             ]),
         new builder.HeroCard(session)
             .title('Farm Insurance')
-            .subtitle("Insure your farm with a company founded by farmers")
-            .text("Farming isn’t like other business, so The Co-operators offers insurance plans specially designed to meet farmers' needs. It’s what you’d expect from a company founded by farmers.")
+            .subtitle("Insure your farm")
+            .text("This is where you get your farm insurance")
             .images([
-                builder.CardImage.create(session, 'https://www.cooperators.ca/en/-/media/Cooperators-Media/Section-Media/Insurance/Farm/Farm-Landing.png?la=en&hash=518D3DFD87480BCD76E2939F33B057DEC676FC61')
+                builder.CardImage.create(session, 'IMAGE_URL_HERE')
             ])
             .buttons([
-                builder.CardAction.openUrl(session, 'https://www.cooperators.ca/en/insurance/farm.aspx', 'Learn More')
+                builder.CardAction.openUrl(session, 'WEB_URL_HERE', 'Learn More')
             ]),
         new builder.HeroCard(session)
             .title('Travel Insurance')
             .subtitle("Coverage wherever you roam")
             .text("Are you taking a business trip? Going on a cruise? Visiting Canada? Backpacking through Europe? Make sure you’ve packed travel insurance as protection against the unexpected. We can cover you for trip cancellation, interruptions in your plans, or medical expenses.")
             .images([
-                builder.CardImage.create(session, 'https://www.cooperators.ca/en/-/media/Cooperators-Media/Section-Media/Insurance/Travel/Travel-Landing.png?la=en&hash=35661A846E9932F3AAE0A600A65AB694459DE37E')
+                builder.CardImage.create(session, 'IMAGE_URL_HERE')
             ])
             .buttons([
-                builder.CardAction.openUrl(session, 'https://www.cooperators.ca/en/insurance/travel.aspx', 'Learn More')
+                builder.CardAction.openUrl(session, 'WEB_URL_HERE', 'Learn More')
             ]),
     ];
 }
